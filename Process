@@ -1,0 +1,20 @@
+<?php
+
+require_once "autoload.php";
+
+if (isset($_POST["Submit"])) {
+    $Conn = new Connection();
+    $userId = $_POST["userId"];
+    $Full_Name =$_POST["Full_Name"];
+    $email = $_POST["email"];
+    $phone_Number =$_POST["phone_Number"];
+    $User_Name = $_POST["User_Name"];
+    $Password = $_POST["Password"];
+
+    $prcs->Submit($userId,$Full_Name,$email,$phone_Number,$User_Name,$Password);
+    
+    header("Location: index.php");
+
+}
+
+?>
